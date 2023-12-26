@@ -3,6 +3,8 @@ span {
 }
 
 .text-input {
+  padding: 0;
+  margin-top: 36px;
   width: 272px;
   height: 40px;
   border-radius: 4px;
@@ -59,6 +61,7 @@ span {
   padding: 8px 16px;
   height: 40px;
   border: none;
+  margin-left: 8px;
 }
 
 .value {
@@ -100,4 +103,14 @@ span {
 
 .flatpickr-day.selected {
   background-color: #4e75ff;
+}
+
+.text-input flatpickr-input active {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em; /* 150% */
+  letter-spacing: 0.64px;
 }

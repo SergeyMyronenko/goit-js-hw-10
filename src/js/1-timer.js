@@ -1,6 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-import izitoast from 'izitoast';
+import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const myInput = document.querySelector('#datetime-picker');
@@ -21,7 +21,7 @@ const options = {
     const initialTimer = selectedData.getTime() - new Date().getTime();
     const renderTimer = convertMs(initialTimer);
 
-    if (selectedDates[0] < new Date()) {
+    if (selectedData < new Date()) {
       iziToast.error({
         position: 'topRight',
         message: 'Please choose a date in the future',
@@ -30,11 +30,6 @@ const options = {
     } else {
       startBtn.removeAttribute('disabled');
       userSelectedDate = selectedData;
-
-      timerDay.textContent = `${renderTimer.days}`;
-      timerHours.textContent = `${renderTimer.hours}`;
-      timerMinutes.textContent = `${renderTimer.minutes}`;
-      timerSeconds.textContent = `${renderTimer.seconds}`;
     }
   },
 };
