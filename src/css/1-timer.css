@@ -49,6 +49,10 @@ span {
   border: none;
 }
 
+.btn-start:disabled:hover {
+  background-color: #cfcfcf;
+}
+
 .btn-start {
   background-color: #4e75ff;
   color: #fff;
