@@ -19,7 +19,8 @@ span {
 }
 
 .flatpickr-input {
-  /* padding: 8px 16px; */
+  display: inline-block;
+  box-sizing: border-box;
 }
 
 .field {
@@ -62,6 +63,10 @@ span {
   height: 40px;
   border: none;
   margin-left: 8px;
+}
+
+.btn-start:hover {
+  background-color: #6c8cff;
 }
 
 .value {

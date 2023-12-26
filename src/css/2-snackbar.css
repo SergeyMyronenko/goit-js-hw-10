@@ -102,3 +102,7 @@ legend {
   line-height: 1.5em; /* 150% */
   letter-spacing: 0.64px;
 }
+
+.create-btn:hover {
+  background-color: #6c8cff;
+}
