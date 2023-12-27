@@ -34,17 +34,24 @@ const options = {
   },
 };
 const fp = flatpickr(myInput, options);
-let userSelectedDate = fp;
+let userSelectedDate = null;
 
 startBtn.addEventListener('click', () => {
   const selectedTime = userSelectedDate.getTime();
+  myInput.value = '';
+  myInput.setAttribute('disabled', true);
+  startBtn.setAttribute('disabled', true);
 
   const timerInterval = setInterval(() => {
-    const currentTime = new Date().getTime();
+    const currentTime = Date.now();
     let remainingTime = selectedTime - currentTime;
     const numberOfTimer = convertMs(remainingTime);
 
     if (remainingTime <= 0) {
+      iziToast.info({
+        position: 'topRight',
+        message: 'Time is up',
+      });
       clearInterval(timerInterval);
     } else {
       timerDay.textContent = `${numberOfTimer.days}`;

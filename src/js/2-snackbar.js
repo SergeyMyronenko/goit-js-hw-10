@@ -8,7 +8,7 @@ promiseForm.addEventListener('submit', event => {
   event.preventDefault();
   const getDelay = promiseForm.elements.delay.value;
   const radioIn = promiseForm.elements.state.value;
-
+  event.target.reset();
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (radioIn === 'fulfilled') {
